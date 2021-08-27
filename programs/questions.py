@@ -16,7 +16,7 @@
 
 #===========================================================================================================================================================
 
-# <QUESTION 1>
+# <QUESTION 1> - Done
 
 # Define a function that can accept two strings as input and returns the string with maximum length to the console.
 
@@ -84,7 +84,7 @@ def two(input):
 
 #===========================================================================================================================================================
 
-# <QUESTION 3>
+# <QUESTION 3> - Done
 
 # given a number
 # if this number is divisible by 3 return "fizz"
@@ -120,7 +120,7 @@ def three(arg1):
 
 #===========================================================================================================================================================
 
-# <QUESTION 4>
+# <QUESTION 4> - Done
 
 # Given a string seperate the string into the individual numbers present, then add each digit of each number to get a final value for each number
 
@@ -239,7 +239,7 @@ def six(input):
 
 #===========================================================================================================================================================
 
-# <QUESTION 7>
+# <QUESTION 7> - Done
 
 # Write a function which returns the integer number of vowels in a given string.
 # You should ignore case.
@@ -267,20 +267,6 @@ def seven(input):
     return vowelCount
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #===========================================================================================================================================================
 
 # <QUESTION 8>
@@ -300,6 +286,8 @@ def seven(input):
 
 
 def eight(input):
+    
+
     return ""
 
 
@@ -338,7 +326,13 @@ def eight(input):
 
 
 def nine(inputString, char):
-    return ""
+    inputString = inputString.replace(" ", "")  #Removes whitespace
+    index = inputString.find(char)              #Finds first instance of the char
+
+    if index == -1:     #Return -1 if char doesn't exist
+        return -1
+
+    return index + 1    #Return index + 1 (to correct format) if char exists
 
 
 
