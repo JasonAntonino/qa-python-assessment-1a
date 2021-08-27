@@ -160,16 +160,6 @@ def four(arg1):
 
 
 
-
-
-
-
-
-
-
-
-
-
 #===========================================================================================================================================================
 
 # <QUESTION 5>
@@ -265,7 +255,16 @@ def six(input):
 
 
 def seven(input):
-    return ""
+    inputLowered = input.lower()    #Converts string to lower case
+    vowelCount = 0
+
+    vowels = "aeiou"
+
+    for char in inputLowered:
+        if char in vowels:
+            vowelCount +=1
+
+    return vowelCount
 
 
 
