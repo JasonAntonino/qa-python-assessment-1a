@@ -118,11 +118,6 @@ def three(arg1):
 
 
 
-
-
-
-
-
 #===========================================================================================================================================================
 
 # <QUESTION 4>
@@ -149,7 +144,19 @@ def three(arg1):
 
 
 def four(arg1):
-    return ""
+    numList = arg1.split(" ")       #Returns a list with each number separated
+    totalList = []
+
+    for num in numList:             #Iterates through each number in numList
+        total = 0
+        for char in num:            #Iterates through each character per number
+            total += int(char)
+        
+        totalList.append(total)
+
+    highestValue = max(totalList)
+
+    return highestValue
 
 
 
