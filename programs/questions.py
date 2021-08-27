@@ -336,19 +336,6 @@ def nine(inputString, char):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 #===========================================================================================================================================================
 
 # <QUESTION 10>
@@ -370,4 +357,14 @@ def nine(inputString, char):
 
 
 def ten(string, int, char):
-    return ""
+    string = string.lower()             #Converts all to lowercase
+    string = string.replace(" ", "")    #Removes all whitespace
+
+    index = string.find(char)
+
+    if index == -1:
+        return False
+    elif index + 1 == int:              #If the position is the same as int
+        return True
+    else:                               #If the position does not match int    
+        return False
