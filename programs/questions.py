@@ -47,7 +47,6 @@ def one(input1, input2):
         return f"{input1} {input2}"
 
 
-
 #===========================================================================================================================================================
 
 # <QUESTION 2> - Done
@@ -122,8 +121,6 @@ def three(arg1):
         return "buzz"
 
 
-
-
 #===========================================================================================================================================================
 
 # <QUESTION 4> - Done
@@ -165,10 +162,9 @@ def four(arg1):
     return highestValue
 
 
-
 #===========================================================================================================================================================
 
-# <QUESTION 5>
+# <QUESTION 5> - Done
 
 # Given a large string that represents a csv, the structure of each record will be as follows:
 
@@ -195,23 +191,30 @@ def four(arg1):
 
 
 def five(input):
-    return ""
+    nameList = []                       #Will store all the name values
+    encryptedList = []                  #Will store all the boolean values
+    nonEncryptedList = []
 
+    dataList = input.split(",")         #Splits each record by the comma and stores in a list
 
+    for i in range(0, len(dataList), 4):        #Collects all name values
+        nameList.append(dataList[i])
 
+    for j in range(2, len(dataList), 4):        #Collects all encrypted values
+        encryptedList.append(dataList[j])
 
+    for k in range(0, len(encryptedList)):          #Identifies which people have False in terms of encryption
+        if encryptedList[k] == "False":
+            nonEncryptedList.append(nameList[k])
 
+    nonEncryptedList = list(dict.fromkeys(nonEncryptedList))    #Removes any duplicates within the list
 
-
-
-
-
-
+    return nonEncryptedList
 
 
 #===========================================================================================================================================================
 
-# <QUESTION 6>
+# <QUESTION 6> - Done
 
 # There is a well known mnemonic which goes "I before E, except after C", which is used to determine which order "ei" or "ie" should be in a word.
 
@@ -337,7 +340,6 @@ def nine(inputString, char):
         return -1
 
     return index + 1    #Return index + 1 (to correct format) if char exists
-
 
 
 #===========================================================================================================================================================
