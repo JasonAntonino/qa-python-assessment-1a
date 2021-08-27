@@ -50,7 +50,7 @@ def one(input1, input2):
 
 #===========================================================================================================================================================
 
-# <QUESTION 2>
+# <QUESTION 2> - Done
 
 # Return the string that is between the first and last appearance of "bert" in the given string
 
@@ -230,19 +230,25 @@ def five(input):
 
 
 def six(input):
-    # input = input.lower()
+    input = input.lower()                   #Converts to lowercase
     
-    # if "c" in input:
+    ieIndex = input.find("ie")              #Index of ie within the input
 
-
-    
-
-    return ""
-
-
-
-
-
+    if ieIndex == -1:                       #If substring "ie" doesnt exist, check for "ei" substring
+        eiIndex = input.find("ei")          #Index of ei within the input
+        
+        if eiIndex == -1:
+            return False
+        else:
+            if input[eiIndex-1] == "c":     #Letter c is before the "ie" substring, return True
+                return True
+            else:
+                return False                #Else, return false
+    else:                                   #Else, there is an "ie" substring
+        if input[ieIndex-1] == "c":         #Letter c is before the "ie" substring, return False
+            return False
+        else:
+            return True
 
 
 #===========================================================================================================================================================
