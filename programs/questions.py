@@ -74,12 +74,18 @@ def one(input1, input2):
 
 
 def two(input):
-    return ""
+    inputString = input.lower()                                                     #Ignore case
 
+    bertCount = inputString.count("bert")                                           #Finds how many bert are in the input
 
+    if bertCount == 2:
+        firstBertEndIndex = inputString.find("bert") + 3                            #Index of last letter of 1st bert
+        secondBertStartIndex = inputString.find("bert", firstBertEndIndex+1)        #Index of first letter of 2nd bert
+        finalWord = inputString[firstBertEndIndex + 1: secondBertStartIndex]        #Collects the word in between two berts
 
-
-
+        return finalWord
+    else:
+        return ""
 
 
 #===========================================================================================================================================================
@@ -224,12 +230,14 @@ def five(input):
 
 
 def six(input):
+    # input = input.lower()
+    
+    # if "c" in input:
+
+
+    
+
     return ""
-
-
-
-
-
 
 
 
@@ -269,7 +277,7 @@ def seven(input):
 
 #===========================================================================================================================================================
 
-# <QUESTION 8>
+# <QUESTION 8> - Done
 
 # Write a function which takes an input (between 1 and 10 inclusive) and multiplies it by all the numbers before it.
 # eg If the input is 4, the function calculates 4x3x2x1 = 24
@@ -294,22 +302,9 @@ def eight(input):
     return finalValue
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 #===========================================================================================================================================================
 
-# <QUESTION 9>
+# <QUESTION 9> - Done
 
 # Given a string and a char, returns the position in the String where the char first appears.
 # Ensure the positions are numbered correctly, please refer to the examples for guidance.
