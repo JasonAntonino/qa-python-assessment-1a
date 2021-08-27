@@ -286,9 +286,12 @@ def seven(input):
 
 
 def eight(input):
-    
+    finalValue = 1
 
-    return ""
+    for i in range(1, input+1):         #Iterates through each number up to the given input
+        finalValue = finalValue * i     #Multiplies previous total by the current iteration value
+
+    return finalValue
 
 
 
@@ -338,7 +341,7 @@ def nine(inputString, char):
 
 #===========================================================================================================================================================
 
-# <QUESTION 10>
+# <QUESTION 10> - Done
 
 # Given a string, int and a char, return a boolean value if the 'nth'
 # (represented by the int provided) char of the String supplied is the same as the char supplied.
