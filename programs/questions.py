@@ -105,7 +105,15 @@ def two(input):
 
 
 def three(arg1):
-    return ""
+
+    if arg1 % 3 == 0 and arg1 % 5 == 0:
+        return "fizzbuzz"
+    elif arg1 % 3 != 0 and arg1 % 5 != 0:
+        return "null"
+    elif arg1 % 3 == 0:
+        return "fizz"
+    else:
+        return "buzz"
 
 
 
